@@ -45,22 +45,26 @@ const suggestedQuestions = [
 const faqs = [
   {
     question: "How do I post a new job?",
-    answer: "Navigate to the Recruitment module and click 'Create Job Posting'. Fill in the job details, requirements, and click 'Publish Job' to make it live.",
+    answer:
+      "Navigate to the Recruitment module and click 'Create Job Posting'. Fill in the job details, requirements, and click 'Publish Job' to make it live.",
     category: "Recruitment",
   },
   {
     question: "What's the onboarding process?",
-    answer: "Our onboarding process includes document verification, role-specific training, mentor assignment, and progress tracking through personalized checklists.",
+    answer:
+      "Our onboarding process includes document verification, role-specific training, mentor assignment, and progress tracking through personalized checklists.",
     category: "Onboarding",
   },
   {
     question: "How to schedule interviews?",
-    answer: "Go to the Recruitment module, select a candidate, and click 'Schedule Interview'. You can choose from available time slots and send calendar invites automatically.",
+    answer:
+      "Go to the Recruitment module, select a candidate, and click 'Schedule Interview'. You can choose from available time slots and send calendar invites automatically.",
     category: "Interviews",
   },
   {
     question: "Where can I find company policies?",
-    answer: "Company policies are available in the Directory section under 'Resources' or you can ask me about specific policies and I'll help you find the information.",
+    answer:
+      "Company policies are available in the Directory section under 'Resources' or you can ask me about specific policies and I'll help you find the information.",
     category: "Policies",
   },
 ];
@@ -72,7 +76,8 @@ export default function ChatAssistant() {
     {
       id: "1",
       type: "assistant",
-      content: "Hi! I'm your AI recruitment assistant. I can help you with job postings, onboarding procedures, company policies, and more. How can I assist you today?",
+      content:
+        "Hi! I'm your AI recruitment assistant. I can help you with job postings, onboarding procedures, company policies, and more. How can I assist you today?",
       timestamp: new Date(),
     },
   ]);
@@ -91,9 +96,12 @@ export default function ChatAssistant() {
     setMessages((prev) => [...prev, userMessage]);
 
     // Simple FAQ matching
-    const faqMatch = faqs.find((faq) =>
-      faq.question.toLowerCase().includes(inputValue.toLowerCase()) ||
-      inputValue.toLowerCase().includes(faq.question.toLowerCase().split(" ")[0])
+    const faqMatch = faqs.find(
+      (faq) =>
+        faq.question.toLowerCase().includes(inputValue.toLowerCase()) ||
+        inputValue
+          .toLowerCase()
+          .includes(faq.question.toLowerCase().split(" ")[0]),
     );
 
     setTimeout(() => {
@@ -102,7 +110,9 @@ export default function ChatAssistant() {
         type: "assistant",
         content: faqMatch
           ? faqMatch.answer
-          : "I understand you're asking about '" + inputValue + "'. While I'm still learning, I can help you with job postings, onboarding processes, interview scheduling, and company policies. Could you rephrase your question or ask about one of these topics?",
+          : "I understand you're asking about '" +
+            inputValue +
+            "'. While I'm still learning, I can help you with job postings, onboarding processes, interview scheduling, and company policies. Could you rephrase your question or ask about one of these topics?",
         timestamp: new Date(),
         category: faqMatch?.category,
       };
@@ -134,9 +144,11 @@ export default function ChatAssistant() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <Card className={`w-80 shadow-xl transition-all duration-300 ${
-        isMinimized ? "h-16" : "h-96"
-      }`}>
+      <Card
+        className={`w-80 shadow-xl transition-all duration-300 ${
+          isMinimized ? "h-16" : "h-96"
+        }`}
+      >
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-brand-600 flex items-center justify-center">
@@ -144,7 +156,9 @@ export default function ChatAssistant() {
             </div>
             <div>
               <CardTitle className="text-sm">AI Assistant</CardTitle>
-              <p className="text-xs text-muted-foreground">Always here to help</p>
+              <p className="text-xs text-muted-foreground">
+                Always here to help
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-1">
@@ -242,7 +256,11 @@ export default function ChatAssistant() {
                   onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                   className="text-sm"
                 />
-                <Button size="sm" onClick={handleSendMessage} className="bg-brand-600 hover:bg-brand-700">
+                <Button
+                  size="sm"
+                  onClick={handleSendMessage}
+                  className="bg-brand-600 hover:bg-brand-700"
+                >
                   <Send className="h-4 w-4" />
                 </Button>
               </div>

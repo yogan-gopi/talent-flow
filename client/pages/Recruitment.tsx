@@ -1,11 +1,23 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Progress } from "@/components/ui/progress";
 import {
   Plus,
@@ -136,7 +148,11 @@ export default function Recruitment() {
                         {job.department} • {job.location} • {job.type}
                       </CardDescription>
                     </div>
-                    <Badge variant={job.status === "Active" ? "default" : "secondary"}>
+                    <Badge
+                      variant={
+                        job.status === "Active" ? "default" : "secondary"
+                      }
+                    >
                       {job.status}
                     </Badge>
                   </div>
@@ -158,7 +174,10 @@ export default function Recruitment() {
                         <Eye className="mr-2 h-4 w-4" />
                         View
                       </Button>
-                      <Button size="sm" className="bg-brand-600 hover:bg-brand-700">
+                      <Button
+                        size="sm"
+                        className="bg-brand-600 hover:bg-brand-700"
+                      >
                         <FileText className="mr-2 h-4 w-4" />
                         Edit
                       </Button>
@@ -195,14 +214,19 @@ export default function Recruitment() {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div>
-                      <CardTitle className="text-lg">{candidate.name}</CardTitle>
+                      <CardTitle className="text-lg">
+                        {candidate.name}
+                      </CardTitle>
                       <CardDescription>
-                        {candidate.role} • {candidate.experience} • {candidate.location}
+                        {candidate.role} • {candidate.experience} •{" "}
+                        {candidate.location}
                       </CardDescription>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="text-right">
-                        <div className="text-sm font-medium">{candidate.match}% match</div>
+                        <div className="text-sm font-medium">
+                          {candidate.match}% match
+                        </div>
                         <Progress value={candidate.match} className="w-20" />
                       </div>
                       <Badge
@@ -232,7 +256,10 @@ export default function Recruitment() {
                         <XCircle className="mr-2 h-4 w-4" />
                         Reject
                       </Button>
-                      <Button size="sm" className="bg-brand-600 hover:bg-brand-700">
+                      <Button
+                        size="sm"
+                        className="bg-brand-600 hover:bg-brand-700"
+                      >
                         <CheckCircle2 className="mr-2 h-4 w-4" />
                         Advance
                       </Button>
@@ -255,12 +282,16 @@ export default function Recruitment() {
           <Card>
             <CardHeader>
               <CardTitle>Interview Schedule</CardTitle>
-              <CardDescription>Manage upcoming interviews and feedback</CardDescription>
+              <CardDescription>
+                Manage upcoming interviews and feedback
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="text-center py-8">
                 <Calendar className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-                <p className="text-muted-foreground">No interviews scheduled yet</p>
+                <p className="text-muted-foreground">
+                  No interviews scheduled yet
+                </p>
                 <Button className="mt-4 bg-brand-600 hover:bg-brand-700">
                   Schedule Interview
                 </Button>
@@ -273,13 +304,18 @@ export default function Recruitment() {
           <Card>
             <CardHeader>
               <CardTitle>Create Job Posting</CardTitle>
-              <CardDescription>Post a new job opening to attract top talent</CardDescription>
+              <CardDescription>
+                Post a new job opening to attract top talent
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="job-title">Job Title</Label>
-                  <Input id="job-title" placeholder="e.g. Senior Frontend Developer" />
+                  <Input
+                    id="job-title"
+                    placeholder="e.g. Senior Frontend Developer"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="department">Department</Label>
@@ -296,11 +332,14 @@ export default function Recruitment() {
                   </Select>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="location">Location</Label>
-                  <Input id="location" placeholder="e.g. San Francisco, Remote" />
+                  <Input
+                    id="location"
+                    placeholder="e.g. San Francisco, Remote"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="job-type">Job Type</Label>
@@ -338,7 +377,9 @@ export default function Recruitment() {
 
               <div className="flex gap-2">
                 <Button variant="outline">Save as Draft</Button>
-                <Button className="bg-brand-600 hover:bg-brand-700">Publish Job</Button>
+                <Button className="bg-brand-600 hover:bg-brand-700">
+                  Publish Job
+                </Button>
               </div>
             </CardContent>
           </Card>

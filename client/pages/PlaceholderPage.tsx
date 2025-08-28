@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Lightbulb } from "lucide-react";
 
@@ -7,13 +13,16 @@ interface PlaceholderPageProps {
   description: string;
 }
 
-export default function PlaceholderPage({ title, description }: PlaceholderPageProps) {
+export default function PlaceholderPage({
+  title,
+  description,
+}: PlaceholderPageProps) {
   return (
     <div className="flex flex-1 flex-col gap-4 p-4">
       <div className="flex items-center gap-2">
         <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
       </div>
-      
+
       <div className="flex flex-1 items-center justify-center">
         <Card className="mx-auto max-w-lg">
           <CardHeader className="text-center">
@@ -27,7 +36,8 @@ export default function PlaceholderPage({ title, description }: PlaceholderPageP
           </CardHeader>
           <CardContent className="text-center">
             <p className="mb-4 text-sm text-muted-foreground">
-              This module is currently under development. Continue prompting to help us build this feature.
+              This module is currently under development. Continue prompting to
+              help us build this feature.
             </p>
             <Button className="bg-brand-600 hover:bg-brand-700">
               Request Feature Development

@@ -89,8 +89,12 @@ const AppSidebar = () => {
             <Users className="h-4 w-4" />
           </div>
           <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold text-brand-700">TalentFlow AI</span>
-            <span className="truncate text-xs text-muted-foreground">Recruitment Platform</span>
+            <span className="truncate font-semibold text-brand-700">
+              TalentFlow AI
+            </span>
+            <span className="truncate text-xs text-muted-foreground">
+              Recruitment Platform
+            </span>
           </div>
         </div>
       </SidebarHeader>
@@ -120,7 +124,10 @@ const AppSidebar = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={location.pathname === "/settings"}>
+                <SidebarMenuButton
+                  asChild
+                  isActive={location.pathname === "/settings"}
+                >
                   <Link to="/settings">
                     <Settings />
                     <span>Settings</span>
@@ -142,7 +149,9 @@ const AppSidebar = () => {
                 >
                   <Avatar className="h-8 w-8 rounded-lg">
                     <AvatarImage src="/placeholder.svg" alt="User" />
-                    <AvatarFallback className="rounded-lg bg-brand-600 text-brand-50">AD</AvatarFallback>
+                    <AvatarFallback className="rounded-lg bg-brand-600 text-brand-50">
+                      AD
+                    </AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">Admin User</span>
@@ -160,11 +169,15 @@ const AppSidebar = () => {
                   <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                     <Avatar className="h-8 w-8 rounded-lg">
                       <AvatarImage src="/placeholder.svg" alt="User" />
-                      <AvatarFallback className="rounded-lg bg-brand-600 text-brand-50">AD</AvatarFallback>
+                      <AvatarFallback className="rounded-lg bg-brand-600 text-brand-50">
+                        AD
+                      </AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
                       <span className="truncate font-semibold">Admin User</span>
-                      <span className="truncate text-xs">admin@company.com</span>
+                      <span className="truncate text-xs">
+                        admin@company.com
+                      </span>
                     </div>
                   </div>
                 </DropdownMenuLabel>

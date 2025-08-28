@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -171,7 +177,8 @@ export default function Dashboard() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">
-            Welcome back! Here's an overview of your recruitment and onboarding activities.
+            Welcome back! Here's an overview of your recruitment and onboarding
+            activities.
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -191,18 +198,26 @@ export default function Dashboard() {
         {overviewStats.map((stat) => (
           <Card key={stat.title}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">{stat.title}</CardTitle>
-              <div className={`h-8 w-8 rounded-md ${stat.bgColor} flex items-center justify-center`}>
+              <CardTitle className="text-sm font-medium">
+                {stat.title}
+              </CardTitle>
+              <div
+                className={`h-8 w-8 rounded-md ${stat.bgColor} flex items-center justify-center`}
+              >
                 <stat.icon className={`h-4 w-4 ${stat.color}`} />
               </div>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stat.value}</div>
-              <p className={`text-xs ${
-                stat.trend === "up" ? "text-success-600" :
-                stat.trend === "attention" ? "text-orange-600" :
-                "text-muted-foreground"
-              }`}>
+              <p
+                className={`text-xs ${
+                  stat.trend === "up"
+                    ? "text-success-600"
+                    : stat.trend === "attention"
+                      ? "text-orange-600"
+                      : "text-muted-foreground"
+                }`}
+              >
                 {stat.change}
               </p>
             </CardContent>
@@ -224,12 +239,16 @@ export default function Dashboard() {
                   variant="outline"
                   className="w-full justify-start h-auto p-4 hover:bg-muted"
                 >
-                  <div className={`mr-3 h-8 w-8 rounded-md ${action.color} flex items-center justify-center`}>
+                  <div
+                    className={`mr-3 h-8 w-8 rounded-md ${action.color} flex items-center justify-center`}
+                  >
                     <action.icon className="h-4 w-4 text-white" />
                   </div>
                   <div className="text-left">
                     <div className="font-medium">{action.title}</div>
-                    <div className="text-sm text-muted-foreground">{action.description}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {action.description}
+                    </div>
                   </div>
                   <ArrowRight className="ml-auto h-4 w-4" />
                 </Button>
@@ -242,7 +261,9 @@ export default function Dashboard() {
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle>Recent Activity</CardTitle>
-            <CardDescription>Latest updates across your recruitment pipeline</CardDescription>
+            <CardDescription>
+              Latest updates across your recruitment pipeline
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -255,7 +276,9 @@ export default function Dashboard() {
                   </Avatar>
                   <div className="flex-1 space-y-1">
                     <p className="text-sm">{activity.message}</p>
-                    <p className="text-xs text-muted-foreground">{activity.time}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {activity.time}
+                    </p>
                   </div>
                   <Badge variant="outline" className="text-xs">
                     {activity.type}
@@ -272,22 +295,34 @@ export default function Dashboard() {
         <Card>
           <CardHeader>
             <CardTitle>Upcoming Tasks</CardTitle>
-            <CardDescription>Stay on top of your scheduled activities</CardDescription>
+            <CardDescription>
+              Stay on top of your scheduled activities
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               {upcomingTasks.map((task) => (
-                <div key={task.id} className="flex items-center justify-between p-3 border rounded-lg">
+                <div
+                  key={task.id}
+                  className="flex items-center justify-between p-3 border rounded-lg"
+                >
                   <div className="flex items-center gap-3">
-                    <div className={`h-2 w-2 rounded-full ${
-                      task.urgent ? "bg-orange-500" : "bg-brand-500"
-                    }`} />
+                    <div
+                      className={`h-2 w-2 rounded-full ${
+                        task.urgent ? "bg-orange-500" : "bg-brand-500"
+                      }`}
+                    />
                     <div>
                       <p className="font-medium text-sm">{task.title}</p>
-                      <p className="text-xs text-muted-foreground">{task.time}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {task.time}
+                      </p>
                     </div>
                   </div>
-                  <Badge variant={task.urgent ? "destructive" : "outline"} className="text-xs">
+                  <Badge
+                    variant={task.urgent ? "destructive" : "outline"}
+                    className="text-xs"
+                  >
                     {task.type}
                   </Badge>
                 </div>
@@ -314,9 +349,13 @@ export default function Dashboard() {
                     <p className="text-sm font-medium">{kpi.title}</p>
                     <div className="text-right">
                       <p className="text-sm font-bold">{kpi.value}</p>
-                      <p className={`text-xs ${
-                        kpi.trend === "improvement" ? "text-success-600" : "text-muted-foreground"
-                      }`}>
+                      <p
+                        className={`text-xs ${
+                          kpi.trend === "improvement"
+                            ? "text-success-600"
+                            : "text-muted-foreground"
+                        }`}
+                      >
                         {kpi.change}
                       </p>
                     </div>
@@ -328,9 +367,11 @@ export default function Dashboard() {
                     </div>
                     <Progress
                       value={
-                        kpi.title === "Time to Hire" ? 75 :
-                        kpi.title === "Onboarding Completion" ? 94 :
-                        94
+                        kpi.title === "Time to Hire"
+                          ? 75
+                          : kpi.title === "Onboarding Completion"
+                            ? 94
+                            : 94
                       }
                       className="h-2"
                     />
