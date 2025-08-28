@@ -201,32 +201,34 @@ export default function Dashboard() {
       </div>
 
       {/* Overview Stats */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {overviewStats.map((stat) => (
-          <Card key={stat.title}>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">
-                {stat.title}
-              </CardTitle>
-              <div
-                className={`h-8 w-8 rounded-md ${stat.bgColor} flex items-center justify-center`}
-              >
-                <stat.icon className={`h-4 w-4 ${stat.color}`} />
+          <Card key={stat.title} className="border-0 shadow-lg rounded-xl bg-white">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <div
+                  className={`h-12 w-12 rounded-xl ${stat.bgColor} flex items-center justify-center`}
+                >
+                  <stat.icon className={`h-6 w-6 ${stat.color}`} />
+                </div>
+                <div
+                  className={`text-xs px-2 py-1 rounded-full ${
+                    stat.trend === "up"
+                      ? "bg-success-100 text-success-700"
+                      : stat.trend === "attention"
+                        ? "bg-orange-100 text-orange-700"
+                        : "bg-gray-100 text-gray-700"
+                  }`}
+                >
+                  {stat.change}
+                </div>
               </div>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{stat.value}</div>
-              <p
-                className={`text-xs ${
-                  stat.trend === "up"
-                    ? "text-success-600"
-                    : stat.trend === "attention"
-                      ? "text-orange-600"
-                      : "text-muted-foreground"
-                }`}
-              >
-                {stat.change}
-              </p>
+              <div className="space-y-1">
+                <h3 className="text-sm font-medium text-muted-foreground">
+                  {stat.title}
+                </h3>
+                <div className="text-3xl font-bold tracking-tight">{stat.value}</div>
+              </div>
             </CardContent>
           </Card>
         ))}
