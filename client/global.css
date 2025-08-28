@@ -21,71 +21,71 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 217 91% 60%;
+    --primary: 196 100% 44%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 196 20% 96%;
+    --secondary-foreground: 196 100% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 196 15% 96%;
+    --muted-foreground: 196 10% 45%;
 
-    --accent: 197 37% 24%;
+    --accent: 196 100% 35%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 217 91% 60%;
+    --border: 196 20% 90%;
+    --input: 196 20% 90%;
+    --ring: 196 100% 44%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 222 25% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-background: 196 100% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 196 100% 44%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 217 32% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 32% 17%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 196 50% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 196 50% 15%;
+    --sidebar-ring: 196 100% 44%;
 
-    /* Brand Colors - Blue/Teal/Purple for Trust & Innovation */
-    --brand-50: 213 100% 96%;
-    --brand-100: 213 94% 91%;
-    --brand-200: 212 92% 83%;
-    --brand-300: 211 90% 72%;
-    --brand-400: 210 87% 60%;
-    --brand-500: 217 91% 60%;
-    --brand-600: 220 91% 54%;
-    --brand-700: 223 89% 48%;
-    --brand-800: 225 84% 41%;
-    --brand-900: 224 76% 35%;
+    /* Brand Colors - Based on #00a8e0 */
+    --brand-50: 196 100% 97%;
+    --brand-100: 196 100% 92%;
+    --brand-200: 196 100% 84%;
+    --brand-300: 196 100% 72%;
+    --brand-400: 196 100% 58%;
+    --brand-500: 196 100% 44%;
+    --brand-600: 196 100% 35%;
+    --brand-700: 196 100% 28%;
+    --brand-800: 196 100% 22%;
+    --brand-900: 196 100% 16%;
 
-    /* Trust Colors - Deep Blue */
-    --trust-50: 217 100% 97%;
-    --trust-100: 217 89% 94%;
-    --trust-200: 217 83% 86%;
-    --trust-300: 217 83% 75%;
-    --trust-400: 217 83% 64%;
-    --trust-500: 217 91% 60%;
-    --trust-600: 222 89% 52%;
-    --trust-700: 225 84% 44%;
-    --trust-800: 227 78% 36%;
-    --trust-900: 225 70% 29%;
+    /* Trust Colors - Deeper Blue for Trust */
+    --trust-50: 210 100% 97%;
+    --trust-100: 210 100% 92%;
+    --trust-200: 210 100% 84%;
+    --trust-300: 210 100% 72%;
+    --trust-400: 210 100% 58%;
+    --trust-500: 210 100% 44%;
+    --trust-600: 210 100% 35%;
+    --trust-700: 210 100% 28%;
+    --trust-800: 210 100% 22%;
+    --trust-900: 210 100% 16%;
 
-    /* Innovation Colors - Teal/Purple */
-    --innovation-50: 197 62% 95%;
-    --innovation-100: 197 55% 89%;
-    --innovation-200: 197 49% 77%;
-    --innovation-300: 197 43% 64%;
-    --innovation-400: 197 37% 52%;
-    --innovation-500: 197 37% 24%;
-    --innovation-600: 260 37% 24%;
-    --innovation-700: 260 45% 20%;
-    --innovation-800: 260 52% 16%;
-    --innovation-900: 260 58% 12%;
+    /* Innovation Colors - Complementary Teal/Cyan */
+    --innovation-50: 180 100% 97%;
+    --innovation-100: 180 100% 92%;
+    --innovation-200: 180 80% 84%;
+    --innovation-300: 180 70% 72%;
+    --innovation-400: 180 60% 58%;
+    --innovation-500: 180 50% 44%;
+    --innovation-600: 180 60% 35%;
+    --innovation-700: 180 70% 28%;
+    --innovation-800: 180 80% 22%;
+    --innovation-900: 180 90% 16%;
 
     /* Success Colors - Green */
     --success-50: 138 76% 97%;
