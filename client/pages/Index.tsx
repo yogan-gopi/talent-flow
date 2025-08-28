@@ -344,7 +344,7 @@ export default function Dashboard() {
         </Card>
 
         {/* KPI Widgets */}
-        <Card>
+        <Card className="border-0 shadow-lg rounded-xl bg-white">
           <CardHeader>
             <CardTitle>Key Performance Indicators</CardTitle>
             <CardDescription>Track your recruitment efficiency</CardDescription>
