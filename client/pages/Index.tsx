@@ -394,6 +394,42 @@ export default function Dashboard() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Blue Gradient Section - AT&T Style */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 p-8 text-white shadow-xl mt-8">
+        <div className="relative z-10">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="text-center">
+              <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-white/20 flex items-center justify-center">
+                <Activity className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Analytics Hub</h3>
+              <p className="text-brand-100 text-sm">
+                Deep insights into your recruitment metrics and performance indicators
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-white/20 flex items-center justify-center">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Team Collaboration</h3>
+              <p className="text-brand-100 text-sm">
+                Seamless coordination between HR, managers, and hiring teams
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-white/20 flex items-center justify-center">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Expert-led Training</h3>
+              <p className="text-brand-100 text-sm">
+                Comprehensive onboarding programs and skill development resources
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-white/10" />
+      </div>
     </div>
   );
 }
