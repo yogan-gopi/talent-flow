@@ -32,6 +32,7 @@ const App = () => (
               />
             }
           />
+          <Route path="my-onboarding" element={<EmployeeOnboarding />} />
           <Route
             path="analytics"
             element={
