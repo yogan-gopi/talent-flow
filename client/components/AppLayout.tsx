@@ -57,6 +57,11 @@ const navigationItems = [
     icon: GraduationCap,
   },
   {
+    title: "My Onboarding",
+    url: "/my-onboarding",
+    icon: User,
+  },
+  {
     title: "Analytics",
     url: "/analytics",
     icon: BarChart3,
