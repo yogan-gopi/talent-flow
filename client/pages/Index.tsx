@@ -234,40 +234,39 @@ export default function Dashboard() {
         ))}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-8 lg:grid-cols-3">
         {/* Quick Actions */}
-        <Card className="lg:col-span-1">
-          <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
-            <CardDescription>Streamline your most common tasks</CardDescription>
+        <Card className="lg:col-span-1 border-0 shadow-lg rounded-xl bg-white">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-xl font-semibold">Quick Actions</CardTitle>
+            <CardDescription className="text-base">Streamline your most common tasks</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-3">
+          <CardContent className="space-y-4">
             {quickActions.map((action) => (
               <Link key={action.title} to={action.href}>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start h-auto p-4 hover:bg-muted"
-                >
-                  <div
-                    className={`mr-3 h-8 w-8 rounded-md ${action.color} flex items-center justify-center`}
-                  >
-                    <action.icon className="h-4 w-4 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-medium">{action.title}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {action.description}
+                <div className="group p-4 rounded-xl border border-gray-100 hover:border-brand-200 hover:bg-brand-50/50 transition-all duration-200 cursor-pointer">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`h-12 w-12 rounded-xl ${action.color} flex items-center justify-center group-hover:scale-105 transition-transform`}
+                    >
+                      <action.icon className="h-5 w-5 text-white" />
                     </div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-gray-900">{action.title}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {action.description}
+                      </div>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-brand-600 transition-colors" />
                   </div>
-                  <ArrowRight className="ml-auto h-4 w-4" />
-                </Button>
+                </div>
               </Link>
             ))}
           </CardContent>
         </Card>
 
         {/* Recent Activity */}
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2 border-0 shadow-lg rounded-xl bg-white">
           <CardHeader>
             <CardTitle>Recent Activity</CardTitle>
             <CardDescription>
