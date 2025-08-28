@@ -25,6 +25,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import ChatAssistant from "./ChatAssistant";
 import {
   Home,
   Users,
