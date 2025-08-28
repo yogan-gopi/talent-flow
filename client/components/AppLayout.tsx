@@ -90,15 +90,15 @@ const AppSidebar = () => {
   return (
     <Sidebar variant="inset">
       <SidebarHeader>
-        <div className="flex items-center gap-2 px-2 py-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-brand-50">
-            <Users className="h-4 w-4" />
+        <div className="flex items-center gap-3 px-3 py-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-white shadow-lg">
+            <Users className="h-5 w-5" />
           </div>
-          <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold text-brand-700">
+          <div className="grid flex-1 text-left leading-tight">
+            <span className="truncate font-bold text-lg text-brand-700">
               TalentFlow AI
             </span>
-            <span className="truncate text-xs text-muted-foreground">
+            <span className="truncate text-sm text-muted-foreground">
               Recruitment Platform
             </span>
           </div>
