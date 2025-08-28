@@ -229,6 +229,7 @@ export default function AppLayout() {
           <Outlet />
         </div>
       </SidebarInset>
+      <ChatAssistant />
     </SidebarProvider>
   );
 }
