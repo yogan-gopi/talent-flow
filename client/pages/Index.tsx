@@ -387,7 +387,7 @@ export default function Dashboard() {
                 </div>
               ))}
             </div>
-            <Button variant="outline" className="w-full mt-4">
+            <Button variant="outline" className="w-full mt-6 bg-brand-50 border-brand-200 text-brand-700 hover:bg-brand-100">
               <TrendingUp className="mr-2 h-4 w-4" />
               View Analytics
             </Button>
