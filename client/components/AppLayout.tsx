@@ -29,6 +29,7 @@ import ChatAssistant from "./ChatAssistant";
 import {
   Home,
   Users,
+  User,
   GraduationCap,
   BarChart3,
   MessageSquare,
