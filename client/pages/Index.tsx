@@ -301,9 +301,9 @@ export default function Dashboard() {
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Upcoming Tasks */}
         <Card className="border-0 shadow-lg rounded-xl bg-white">
-          <CardHeader>
-            <CardTitle>Upcoming Tasks</CardTitle>
-            <CardDescription>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-xl font-semibold">Upcoming Tasks</CardTitle>
+            <CardDescription className="text-base">
               Stay on top of your scheduled activities
             </CardDescription>
           </CardHeader>
@@ -312,31 +312,31 @@ export default function Dashboard() {
               {upcomingTasks.map((task) => (
                 <div
                   key={task.id}
-                  className="flex items-center justify-between p-3 border rounded-lg"
+                  className="flex items-center justify-between p-4 border border-gray-100 rounded-xl hover:border-brand-200 hover:bg-brand-50/30 transition-all"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-4">
                     <div
-                      className={`h-2 w-2 rounded-full ${
+                      className={`h-3 w-3 rounded-full ${
                         task.urgent ? "bg-orange-500" : "bg-brand-500"
                       }`}
                     />
                     <div>
-                      <p className="font-medium text-sm">{task.title}</p>
-                      <p className="text-xs text-muted-foreground">
+                      <p className="font-semibold text-sm">{task.title}</p>
+                      <p className="text-sm text-muted-foreground">
                         {task.time}
                       </p>
                     </div>
                   </div>
                   <Badge
                     variant={task.urgent ? "destructive" : "outline"}
-                    className="text-xs"
+                    className="text-xs bg-brand-50 text-brand-700 border-brand-200"
                   >
                     {task.type}
                   </Badge>
                 </div>
               ))}
             </div>
-            <Button variant="outline" className="w-full mt-4">
+            <Button variant="outline" className="w-full mt-6 bg-brand-50 border-brand-200 text-brand-700 hover:bg-brand-100">
               <Calendar className="mr-2 h-4 w-4" />
               View All Tasks
             </Button>
