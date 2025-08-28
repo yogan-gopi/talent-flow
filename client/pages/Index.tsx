@@ -177,7 +177,9 @@ export default function Dashboard() {
         <div className="relative z-10">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight mb-2">Welcome to TalentFlow AI</h1>
+              <h1 className="text-4xl font-bold tracking-tight mb-2">
+                Welcome to TalentFlow AI
+              </h1>
               <p className="text-brand-100 text-lg">
                 Your comprehensive recruitment and onboarding platform
               </p>
@@ -186,7 +188,10 @@ export default function Dashboard() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
+              <Button
+                variant="outline"
+                className="border-white/20 bg-white/10 text-white hover:bg-white/20"
+              >
                 <Calendar className="mr-2 h-4 w-4" />
                 Schedule Meeting
               </Button>
@@ -203,7 +208,10 @@ export default function Dashboard() {
       {/* Overview Stats */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {overviewStats.map((stat) => (
-          <Card key={stat.title} className="border-0 shadow-lg rounded-xl bg-white">
+          <Card
+            key={stat.title}
+            className="border-0 shadow-lg rounded-xl bg-white"
+          >
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <div
@@ -227,7 +235,9 @@ export default function Dashboard() {
                 <h3 className="text-sm font-medium text-muted-foreground">
                   {stat.title}
                 </h3>
-                <div className="text-3xl font-bold tracking-tight">{stat.value}</div>
+                <div className="text-3xl font-bold tracking-tight">
+                  {stat.value}
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -238,8 +248,12 @@ export default function Dashboard() {
         {/* Quick Actions */}
         <Card className="lg:col-span-1 border-0 shadow-lg rounded-xl bg-white">
           <CardHeader className="pb-4">
-            <CardTitle className="text-xl font-semibold">Quick Actions</CardTitle>
-            <CardDescription className="text-base">Streamline your most common tasks</CardDescription>
+            <CardTitle className="text-xl font-semibold">
+              Quick Actions
+            </CardTitle>
+            <CardDescription className="text-base">
+              Streamline your most common tasks
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             {quickActions.map((action) => (
@@ -252,7 +266,9 @@ export default function Dashboard() {
                       <action.icon className="h-5 w-5 text-white" />
                     </div>
                     <div className="flex-1">
-                      <div className="font-semibold text-gray-900">{action.title}</div>
+                      <div className="font-semibold text-gray-900">
+                        {action.title}
+                      </div>
                       <div className="text-sm text-muted-foreground">
                         {action.description}
                       </div>
@@ -268,7 +284,9 @@ export default function Dashboard() {
         {/* Recent Activity */}
         <Card className="lg:col-span-2 border-0 shadow-lg rounded-xl bg-white">
           <CardHeader className="pb-4">
-            <CardTitle className="text-xl font-semibold">Recent Activity</CardTitle>
+            <CardTitle className="text-xl font-semibold">
+              Recent Activity
+            </CardTitle>
             <CardDescription className="text-base">
               Latest updates across your recruitment pipeline
             </CardDescription>
@@ -276,7 +294,10 @@ export default function Dashboard() {
           <CardContent>
             <div className="space-y-4">
               {recentActivity.map((activity) => (
-                <div key={activity.id} className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                <div
+                  key={activity.id}
+                  className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                >
                   <Avatar className="h-10 w-10">
                     <AvatarFallback className="bg-brand-100 text-brand-700 text-sm font-medium">
                       {activity.avatar}
@@ -288,7 +309,10 @@ export default function Dashboard() {
                       {activity.time}
                     </p>
                   </div>
-                  <Badge variant="outline" className="text-xs bg-brand-50 text-brand-700 border-brand-200">
+                  <Badge
+                    variant="outline"
+                    className="text-xs bg-brand-50 text-brand-700 border-brand-200"
+                  >
                     {activity.type}
                   </Badge>
                 </div>
@@ -302,7 +326,9 @@ export default function Dashboard() {
         {/* Upcoming Tasks */}
         <Card className="border-0 shadow-lg rounded-xl bg-white">
           <CardHeader className="pb-4">
-            <CardTitle className="text-xl font-semibold">Upcoming Tasks</CardTitle>
+            <CardTitle className="text-xl font-semibold">
+              Upcoming Tasks
+            </CardTitle>
             <CardDescription className="text-base">
               Stay on top of your scheduled activities
             </CardDescription>
@@ -336,7 +362,10 @@ export default function Dashboard() {
                 </div>
               ))}
             </div>
-            <Button variant="outline" className="w-full mt-6 bg-brand-50 border-brand-200 text-brand-700 hover:bg-brand-100">
+            <Button
+              variant="outline"
+              className="w-full mt-6 bg-brand-50 border-brand-200 text-brand-700 hover:bg-brand-100"
+            >
               <Calendar className="mr-2 h-4 w-4" />
               View All Tasks
             </Button>
@@ -346,8 +375,12 @@ export default function Dashboard() {
         {/* KPI Widgets */}
         <Card className="border-0 shadow-lg rounded-xl bg-white">
           <CardHeader className="pb-4">
-            <CardTitle className="text-xl font-semibold">Key Performance Indicators</CardTitle>
-            <CardDescription className="text-base">Track your recruitment efficiency</CardDescription>
+            <CardTitle className="text-xl font-semibold">
+              Key Performance Indicators
+            </CardTitle>
+            <CardDescription className="text-base">
+              Track your recruitment efficiency
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
@@ -356,7 +389,9 @@ export default function Dashboard() {
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-semibold">{kpi.title}</p>
                     <div className="text-right">
-                      <p className="text-lg font-bold text-brand-600">{kpi.value}</p>
+                      <p className="text-lg font-bold text-brand-600">
+                        {kpi.value}
+                      </p>
                       <p
                         className={`text-xs ${
                           kpi.trend === "improvement"
@@ -387,7 +422,10 @@ export default function Dashboard() {
                 </div>
               ))}
             </div>
-            <Button variant="outline" className="w-full mt-6 bg-brand-50 border-brand-200 text-brand-700 hover:bg-brand-100">
+            <Button
+              variant="outline"
+              className="w-full mt-6 bg-brand-50 border-brand-200 text-brand-700 hover:bg-brand-100"
+            >
               <TrendingUp className="mr-2 h-4 w-4" />
               View Analytics
             </Button>
@@ -405,7 +443,8 @@ export default function Dashboard() {
               </div>
               <h3 className="text-xl font-bold mb-2">Analytics Hub</h3>
               <p className="text-brand-100 text-sm">
-                Deep insights into your recruitment metrics and performance indicators
+                Deep insights into your recruitment metrics and performance
+                indicators
               </p>
             </div>
             <div className="text-center">
@@ -423,7 +462,8 @@ export default function Dashboard() {
               </div>
               <h3 className="text-xl font-bold mb-2">Expert-led Training</h3>
               <p className="text-brand-100 text-sm">
-                Comprehensive onboarding programs and skill development resources
+                Comprehensive onboarding programs and skill development
+                resources
               </p>
             </div>
           </div>
