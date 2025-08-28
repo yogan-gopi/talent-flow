@@ -171,26 +171,33 @@ const kpiData = [
 
 export default function Dashboard() {
   return (
-    <div className="flex flex-1 flex-col gap-6 p-4">
+    <div className="flex flex-1 flex-col gap-8 p-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-muted-foreground">
-            Welcome back! Here's an overview of your recruitment and onboarding
-            activities.
-          </p>
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 p-8 text-white shadow-xl">
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-4xl font-bold tracking-tight mb-2">Welcome to TalentFlow AI</h1>
+              <p className="text-brand-100 text-lg">
+                Your comprehensive recruitment and onboarding platform
+              </p>
+              <p className="text-brand-200 text-sm mt-1">
+                Streamline your hiring process with AI-powered insights
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <Button variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
+                <Calendar className="mr-2 h-4 w-4" />
+                Schedule Meeting
+              </Button>
+              <Button className="bg-white text-brand-600 hover:bg-white/90 font-semibold">
+                <Plus className="mr-2 h-4 w-4" />
+                Quick Action
+              </Button>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <Button variant="outline">
-            <Calendar className="mr-2 h-4 w-4" />
-            Schedule Meeting
-          </Button>
-          <Button className="bg-brand-600 hover:bg-brand-700">
-            <Plus className="mr-2 h-4 w-4" />
-            Quick Action
-          </Button>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-white/10" />
       </div>
 
       {/* Overview Stats */}
