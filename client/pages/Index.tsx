@@ -298,9 +298,9 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         {/* Upcoming Tasks */}
-        <Card>
+        <Card className="border-0 shadow-lg rounded-xl bg-white">
           <CardHeader>
             <CardTitle>Upcoming Tasks</CardTitle>
             <CardDescription>
