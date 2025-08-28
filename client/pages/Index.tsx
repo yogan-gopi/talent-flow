@@ -267,28 +267,28 @@ export default function Dashboard() {
 
         {/* Recent Activity */}
         <Card className="lg:col-span-2 border-0 shadow-lg rounded-xl bg-white">
-          <CardHeader>
-            <CardTitle>Recent Activity</CardTitle>
-            <CardDescription>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-xl font-semibold">Recent Activity</CardTitle>
+            <CardDescription className="text-base">
               Latest updates across your recruitment pipeline
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {recentActivity.map((activity) => (
-                <div key={activity.id} className="flex items-start gap-3">
-                  <Avatar className="h-8 w-8">
-                    <AvatarFallback className="bg-brand-100 text-brand-700 text-xs">
+                <div key={activity.id} className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <Avatar className="h-10 w-10">
+                    <AvatarFallback className="bg-brand-100 text-brand-700 text-sm font-medium">
                       {activity.avatar}
                     </AvatarFallback>
                   </Avatar>
                   <div className="flex-1 space-y-1">
-                    <p className="text-sm">{activity.message}</p>
+                    <p className="text-sm font-medium">{activity.message}</p>
                     <p className="text-xs text-muted-foreground">
                       {activity.time}
                     </p>
                   </div>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs bg-brand-50 text-brand-700 border-brand-200">
                     {activity.type}
                   </Badge>
                 </div>
