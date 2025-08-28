@@ -82,10 +82,10 @@ const quickActions = [
     color: "bg-trust-600 hover:bg-trust-700",
   },
   {
-    title: "Start Onboarding",
-    description: "Begin onboarding for new hires",
+    title: "My Onboarding",
+    description: "Continue your onboarding journey",
     icon: UserPlus,
-    href: "/onboarding",
+    href: "/my-onboarding",
     color: "bg-innovation-600 hover:bg-innovation-700",
   },
 ];
