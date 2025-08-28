@@ -345,18 +345,18 @@ export default function Dashboard() {
 
         {/* KPI Widgets */}
         <Card className="border-0 shadow-lg rounded-xl bg-white">
-          <CardHeader>
-            <CardTitle>Key Performance Indicators</CardTitle>
-            <CardDescription>Track your recruitment efficiency</CardDescription>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-xl font-semibold">Key Performance Indicators</CardTitle>
+            <CardDescription className="text-base">Track your recruitment efficiency</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-6">
               {kpiData.map((kpi) => (
-                <div key={kpi.title} className="space-y-2">
+                <div key={kpi.title} className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium">{kpi.title}</p>
+                    <p className="text-sm font-semibold">{kpi.title}</p>
                     <div className="text-right">
-                      <p className="text-sm font-bold">{kpi.value}</p>
+                      <p className="text-lg font-bold text-brand-600">{kpi.value}</p>
                       <p
                         className={`text-xs ${
                           kpi.trend === "improvement"
@@ -368,7 +368,7 @@ export default function Dashboard() {
                       </p>
                     </div>
                   </div>
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <div className="flex justify-between text-xs text-muted-foreground">
                       <span>Current</span>
                       <span>Target: {kpi.target}</span>
@@ -381,7 +381,7 @@ export default function Dashboard() {
                             ? 94
                             : 94
                       }
-                      className="h-2"
+                      className="h-3 bg-brand-100"
                     />
                   </div>
                 </div>
